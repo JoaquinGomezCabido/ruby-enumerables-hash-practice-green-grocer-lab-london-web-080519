@@ -3,16 +3,16 @@ def consolidate_cart(cart)
   cart_consolidated = {}
 
   cart.each do |element|
-    if cart_consolidated[element.keys[0]]
-      cart_consolidated[element.keys[0]][:count] += 1
+    if cart_consolidated.include?(element[0])
+      cart_consolidated[element[0]][:count] += 1
     else
-      cart_consolidated[element.keys[0]] = {
-          price: element.values[0][:price],
-          clearance: element.values[0][:clearance],
+      cart_consolidated[element[0]] = {
+          price: element[1][:price],
+          clearance: element[1][:clearance],
           count: 1
         }
+      }
     end
-  end
     cart_consolidated
 end
 
