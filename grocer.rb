@@ -13,6 +13,7 @@ def consolidate_cart(cart)
         }
       }
     end
+  end
     cart_consolidated
 end
 
