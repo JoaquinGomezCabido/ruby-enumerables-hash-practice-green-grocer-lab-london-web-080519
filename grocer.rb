@@ -4,7 +4,7 @@ def consolidate_cart(cart)
 
   cart.each do |element|
     if cart_consolidated.[element.keys[0]]
-      cart_consolidated[element[0]][:count] += 1
+      cart_consolidated[element.keys[0]][:count] += 1
     else
       cart_consolidated = {
         element[0] = {
