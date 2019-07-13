@@ -12,6 +12,7 @@ def consolidate_cart(cart)
           count: 1
         }
     end
+  end
     cart_consolidated
 end
 
