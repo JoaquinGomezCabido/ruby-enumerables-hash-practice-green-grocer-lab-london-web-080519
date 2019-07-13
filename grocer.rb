@@ -11,7 +11,6 @@ def consolidate_cart(cart)
           clearance: element[1][:clearance],
           count: 1
         }
-      }
     end
   end
     cart_consolidated
