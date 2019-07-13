@@ -57,7 +57,7 @@ def checkout(cart, coupons)
   check = cleared_cart.reduce do |total, element|
     total += element[1][:price]
   end
-  
+
   if check > 100
     check = (check * 0.9).round(2)
   end
