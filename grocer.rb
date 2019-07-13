@@ -18,9 +18,8 @@ end
 
 def apply_coupons(cart, coupons)
   # code here
-  cart_discounted = {}
 
-  cart.each do |element|
+  cart.map do |element|
     if cart.[coupons[:item]][:count] > coupons[:num]
       cart.[coupons[:item]][:count] -= coupons[:num]
       cart.["#{coupon[:item]} W/COUPON"] = {
@@ -34,6 +33,7 @@ def apply_coupons(cart, coupons)
       #nothing
     end
   end
+  cart
 end
 
 def apply_clearance(cart)
